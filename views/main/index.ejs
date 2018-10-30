@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+
+<div id="sample">
+  <div style="width: 100%; display: flex; justify-content: space-between">
+    <div style="width: 135px; margin-right: 2px; background-color: whitesmoke; border: solid 1px black">
+      <div id="accordion">
+        <h4>Small items</h4>
+        <div>
+          <div id="myPaletteSmall" style="width: 140px; height: 360px"></div>
+        </div>
+        <h4>Tall items</h4>
+        <div>
+          <div id="myPaletteTall" style="width: 140px; height: 360px"></div>
+        </div>
+        <h4>Wide items</h4>
+        <div>
+          <div id="myPaletteWide" style="width: 140px; height: 360px"></div>
+        </div>
+        <h4>Big items</h4>
+        <div>
+          <div id="myPaletteBig" style="width: 140px; height: 360px"></div>
+        </div>
+      </div>
+    </div>
+    <div id="myDiagramDiv" style="flex-grow: 1; height: 500px; border: solid 1px black"></div>
+  </div>
+  <p>
+    A <em>planogram</em> is a visual representation of a store's products or services, often used as a tool to maximize sales.
+  </p>
+  <p>
+    Drag-and-drop "items" from the Palette onto "racks" in the Diagram.
+    "Items" are implemented as Nodes; "racks" are implemented as Groups.
+    Once items have been placed on a rack, they can be resized, if necessary.
+    The <a>DraggingTool.isGridSnapEnabled</a> and <a>ResizingTool.isGridSnapEnabled</a> are both set
+    to true to allow for snapping to the background grid.
+    Node and Group templates both use dragging functions to allow for highlighting so the user knows which
+    rack an item will belong to.
+  </p>
+  <p>
+    A jQuery Accordion is used to create the four collapsible Palettes.
+  </p>
+  <div>
+    Diagram Model saved in JSON format, automatically updated after each transaction:
+    <pre id="savedModel" style="height:250px"></pre>
+  </div>
+  <p>
+    See also Northwoods Software's planogramming services: <a href="https://goplanogram.com" target="_blank">GoPlanogram</a>.
+  </p>
+</div>
+
+<!-- jQuery -->
+<% include ./jQuery %>
+
+<!-- go.js file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.8.32/go-debug.js"></script>
+
+<!-- Javascript File-->
+<script src="/javascript/main.js"></script>
+
+<% include ../partials/footer %>
