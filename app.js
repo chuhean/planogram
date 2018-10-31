@@ -3,8 +3,6 @@
 //======================================================
 var express         = require("express"),
     app             = express(),
-    bodyParser      = require("body-parser"),
-    methodOverride  = require("method-override"),
     helmet          = require("helmet"),
     compression     = require('compression');
 
@@ -12,11 +10,8 @@ var express         = require("express"),
 //UTILIZE IMPORTED FUNCTIONS
 //======================================================
 app.use(compression());
-app.use(bodyParser.json()); 
-app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
-app.use(methodOverride("_method"));
 app.use(helmet());
 
 //======================================================
