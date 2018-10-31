@@ -1,3 +1,15 @@
 .ui-accordion .ui-accordion-content {
     padding: 1px;
 }
+
+.scale{
+    display: flex; 
+    overflow: hidden; 
+    white-space: nowrap
+}
+
+.user-input{
+    border-style: solid; 
+    border-width: 2px;
+    padding: 4px;
+}
