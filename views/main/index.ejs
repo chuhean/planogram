@@ -31,12 +31,13 @@
     <br>
     
     <div class="user-input">
-      <form>
+      
+      <form id="product-input">
         
         Product Name: <input type="text" name="name">
         
         Color:
-        <select>
+        <select name="productColor">
           <option value="green">Green</option>
           <option value="blue">Blue</option>
           <option value="yellow">Yellow</option>
@@ -46,32 +47,32 @@
         </select>
         
         Property:
-        <select>
+        <select name="productSize">
           <option value="small">Small</option>
           <option value="tall">Tall</option>
           <option value="wide">Wide</option>
           <option value="big">Big</option>
         </select>
         
-        <button type="button">Submit</button>
+        <button type="submit">Submit</button>
         
       </form>
       
       <br> 
       
-      <form>
+      <form id="rack-input">
         
-        Rack Name: <input type="text" name="name">
+        Rack Name: <input type="text" name="rackName">
         
         Size: 
-        <select>
-          <option value="1">1 x 3</option>
-          <option value="2">2 x 3</option>
-          <option value="3">3 x 4</option>
-          <option value="4">3 x 5</option>
+        <select name="rackSize">
+          <option value="300 100">3 x 1</option>
+          <option value="300 200">3 x 2</option>
+          <option value="400 300">4 x 3</option>
+          <option value="500 300">5 x 3</option>
         </select>
   
-        <button type="button">Submit</button>
+        <button type="submit">Submit</button>
         
       </form>
     </div>
@@ -91,5 +92,8 @@
       <pre id="savedModel" style="height:250px"></pre>
     </div>
   </div>
+
+  <!-- User Input JS File-->
+  <script src="/javascript/input.js"></script>
 
 <% include ../partials/footer %>

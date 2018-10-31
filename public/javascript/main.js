@@ -153,10 +153,7 @@ function init() {
 
   // start off with four "racks" that are positioned next to each other
   myDiagram.model = new go.GraphLinksModel([
-    { key: "G1", isGroup: true, pos: "0 0", size: "200 200" },
-    { key: "G2", isGroup: true, pos: "200 0", size: "200 200" },
-    { key: "G3", isGroup: true, pos: "0 200", size: "200 200" },
-    { key: "G4", isGroup: true, pos: "200 200", size: "200 200" }
+    { key: "G1", isGroup: true, pos: "0 0", size: "400 200" },
   ]);
   // this sample does not make use of any links
 
