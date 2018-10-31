@@ -2,6 +2,36 @@
 $( "#product-input" ).submit(function(e) {
     e.preventDefault();
     e.stopPropagation();
+    
+    var productName = $('input[name="productName"]').val();;
+    var productColor = $('select[name="productColor"]').val();
+    var productSize = $('select[name="productSize"]').val();
+    var model;
+    
+    if (productSize === "small"){
+        model = myPaletteSmall.model
+    } else if (productSize === "tall"){
+        model = myPaletteTall.model
+    } else if (productSize === "wide"){
+        model = myPaletteWide.model
+    } else {
+        model = myPaletteBig.model
+    }
+    
+    model.startTransaction("add product");
+    
+    if (productSize === "small"){
+        model.addNodeData({ key: productName, color: productColor });
+    } else if (productSize === "tall"){
+        model.addNodeData({ key: productName, color: productColor, size: "50 100" });
+    } else if (productSize === "wide"){
+        model.addNodeData({ key: productName, color: productColor, size: "100 50" });
+    } else {
+        model.addNodeData({ key: productName, color: productColor, size: "100 100" });
+    }
+    
+    model.commitTransaction("add product");
+    
 });
 
 //Add rack inputs when user click 'submit' button.

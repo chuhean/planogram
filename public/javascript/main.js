@@ -186,7 +186,6 @@ function init() {
   myPaletteSmall.model = new go.GraphLinksModel([
     { key: "g", color: green },
     { key: "b", color: blue },
-    { key: "y", color: yellow }
   ]);
 
   // initialize the second Palette, of tall items
@@ -202,7 +201,6 @@ function init() {
   myPaletteTall.model = new go.GraphLinksModel([
     { key: "g", color: green, size: "50 100" },
     { key: "b", color: blue, size: "50 100" },
-    { key: "y", color: yellow, size: "50 100" }
   ]);
 
   // initialize the third Palette, of wide items
@@ -218,7 +216,6 @@ function init() {
   myPaletteWide.model = new go.GraphLinksModel([
     { key: "g", color: green, size: "100 50" },
     { key: "b", color: blue, size: "100 50" },
-    { key: "y", color: yellow, size: "100 50" }
   ]);
 
   // initialize the fourth Palette, of big items
@@ -234,6 +231,5 @@ function init() {
   myPaletteBig.model = new go.GraphLinksModel([
     { key: "g", color: green, size: "100 100" },
     { key: "b", color: blue, size: "100 100" },
-    { key: "y", color: yellow, size: "100 100" }
   ]);
 }
