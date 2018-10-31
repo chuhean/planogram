@@ -181,6 +181,9 @@ function init() {
   var green = '#B2FF59';
   var blue = '#81D4FA';
   var yellow = '#FFEB3B';
+  var red = '#FF0000';
+  var orange = '#FF8000';
+  var brown = '#964B00';
 
   // specify the contents of the Palette
   myPaletteSmall.model = new go.GraphLinksModel([
